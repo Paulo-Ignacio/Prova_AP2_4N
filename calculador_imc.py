@@ -1,3 +1,5 @@
+avaliados = [] 
+
 def menu_salvar_carregar():
     while True:
         print("*********************************")
@@ -31,6 +33,7 @@ def menu_salvar_carregar():
         else:
             print("Escolha uma opção válida!")
 
+
 def menu_estatisticas():
     while True:
         print("*********************************")
@@ -46,7 +49,13 @@ def menu_estatisticas():
         opc = int(input("Escolha uma opção: "))
         
         if opc == 1:
-            pass  # Criar Tarefa (4)
+            if avaliados:
+                soma_imc = sum([dados[2] for dados in avaliados])
+                media_imc = soma_imc / len(avaliados)
+                print("-------------------------")
+                print(f"A média de IMCs é: {media_imc:.2f}")
+                print("-------------------------")
+                pass  # Criar Tarefa (4)
         elif opc == 2:
             pass  # Criar Tarefa (5)
         elif opc == 3:
@@ -113,9 +122,9 @@ while True:
             print("*******EXIBIÇÃO DE RESULTADOS*****")
             print("*********************************")
             print("""SUBMENU DE EXIBIÇÃO DE RESULTADOS:
-                  1 - Imprimir Todos os Resultados
-                  2 - Imprimir por ID
-                  3 - Imprimir Avaliados Ordenados por Nome
+                  1 -ID
+                  3 - Imprim Imprimir Todos os Resultados
+                  2 - Imprimir por ir Avaliados Ordenados por Nome
                   4 - Imprimir Avaliados Ordenados por IMC
                   5 - Voltar ao Menu Principal""")
             sub_opc = int(input("Escolha uma opção: "))
