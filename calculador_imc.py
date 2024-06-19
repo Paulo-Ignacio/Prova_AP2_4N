@@ -82,6 +82,7 @@ def imprime_ordem_imc(lista):
         imc = pessoa[2]
         grau = pessoa[3]
         print(f"    \n*{nome} tem o IMC {imc}, o que é considerado {grau}*")
+        # CÓDIGO ESCRITO PELOS GURI, NÃO TEM JEITO
 
 avaliados = []
 id = 0
