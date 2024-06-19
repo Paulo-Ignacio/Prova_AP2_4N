@@ -57,6 +57,7 @@ def menu_estatisticas():
             print("Escolha uma opção válida!")
 
 def classifica_imc(imc):
+
     if imc < 16:
         return "Magreza Grave"
     elif imc <= 16.9:
@@ -73,6 +74,14 @@ def classifica_imc(imc):
         return "Obesidade Grau II"
     else:
         return "Obesidade Grau III"
+
+def imprime_ordem_imc(lista):
+    lista_ordenada = sorted(lista, key = lambda x: x[2])
+    for pessoa in lista_ordenada:
+        nome = pessoa[1]
+        imc = pessoa[2]
+        grau = pessoa[3]
+        print(f"    \n*{nome} tem o IMC {imc}, o que é considerado {grau}*")
 
 avaliados = []
 id = 0
@@ -128,10 +137,10 @@ while True:
                 pass  # Criar Tarefa (1)
             
             elif sub_opc == 3:
-                pass  # Criar Tarefa (2)
+                pass
             
             elif sub_opc == 4:
-                pass  # Criar Tarefa (3)
+                imprime_ordem_imc(avaliados)
             
             elif sub_opc == 5:
                 continue
