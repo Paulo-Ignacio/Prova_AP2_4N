@@ -49,12 +49,21 @@ def menu_estatisticas():
             pass  # Criar Tarefa (4)
         elif opc == 2:
             pass  # Criar Tarefa (5)
-        elif opc == 3:
-            pass  # Criar Tarefa (6)
+
+        if len(avaliados) == 0:
+                print("Nenhum avaliado registrado.")
+        else:
+            maior_imc = max(avaliados, key=lambda x: x[2])
+            menor_imc = min(avaliados, key=lambda x: x[2])
+            print(f"O maior IMC é {maior_imc[2]} de {maior_imc[1]}")
+            print(f"O menor IMC é {menor_imc[2]} de {menor_imc[1]}")
+
+            """ elif opc == 3:
+           pass  # Criar Tarefa (6)
         elif opc == 4:
             break
         else:
-            print("Escolha uma opção válida!")
+            print("Escolha uma opção válida!")"""
 
 def classifica_imc(imc):
     if imc < 16:
