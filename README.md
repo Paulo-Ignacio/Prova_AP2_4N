@@ -32,7 +32,7 @@ Este é um aplicativo simples em Python que calcula e classifica o Índice de Ma
 - Detalhes da Implementação: Ordenar a lista de avaliados pelo nome e exibir os dados.
 - Nível de Conhecimento: Básico. Não requer conhecimentos avançados de programação.
 
-### Grupo 3
+### Tarefa 3
 
 **Tarefa: Implementar Impressão por IMC**
 - Descrição: Implementar a exibição da lista de avaliados ordenada por IMC.
