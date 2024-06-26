@@ -1,0 +1,58 @@
+Distribuição dos grupos:
+Grupo 1:
+  José Eduardo (Nota: 10.0)
+  Hicaro (Nota: 6.0)
+  João Lucas (Nota: 4.0)
+  Eriel (Nota: 4.0)
+Grupo 2:
+  Pedro (Nota: 10.0)
+  Marcelo (Nota: 6.0)
+  Kauã (Nota: 4.0)
+  Célio (Nota: 4.0)
+Grupo 3:
+  Leonardo (Nota: 8.0)
+  Felipe (Nota: 6.0)
+  Mikael (Nota: 4.0)
+  Rafael (Nota: 4.0)
+Grupo 4:
+  Cauã (Nota: 7.0)
+  Beatriz (Nota: 5.0)
+  Diogo (Nota: 4.0)
+Grupo 5:
+  Donisete (Nota: 6.0)
+  Eduarda (Nota: 5.0)
+  Maria (Nota: 4.0)
+Grupo 6:
+  Murilo (Nota: 6.0)
+  Davi (Nota: 5.0)
+  Marco Aurélio (Nota: 4.0)
+
+
+Atribuições de tarefas:
+JOSÉ -> Grupo2
+Pedro -> Grupo3
+Mikael -> Grupo5
+Diogo -> Grupo6
+Maria -> Grupo4
+Murilo -> Grupo1
+
+git checkout main
+
+git checkout grupox
+
+code .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

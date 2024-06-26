@@ -73,6 +73,30 @@ def classifica_imc(imc):
         return "Obesidade Grau II"
     else:
         return "Obesidade Grau III"
+    
+
+def nova_ordem(lista):
+    alfa = []
+
+    for c in lista:
+        alfa.append(c[1])
+    
+    alfa.sort()
+    
+    for index, al in enumerate(alfa):
+        for li in lista:
+            if li[1] == al:
+                alfa[index] = li[0]
+                break
+    
+    return alfa
+
+
+def print_formatado(lista, ordem):
+
+    for item in ordem:
+        print(f"{lista[item-1][0]}: O usuario {lista[item-1][1]} tem o imc {lista[item-1][2]} e sua classificação é: {lista[item-1][3]} ")
+
 
 avaliados = []
 id = 0
@@ -100,7 +124,7 @@ while True:
         imc = round(peso / altura ** 2, 2)
         classificacao = classifica_imc(imc)
         print(f"O IMC de {nome} é {imc} e está classificado como: {classificacao}")
-        
+
         id += 1
         dados = [id, nome, imc, classificacao]
         avaliados.append(dados)
@@ -135,7 +159,13 @@ while True:
                             print("ID não encontrado")
             
             elif sub_opc == 3:
-                pass  # Criar Tarefa (2)
+                ordem_alfabetica = avaliados
+                ordem_alfabetica = nova_ordem(ordem_alfabetica)
+
+                for c in ordem_alfabetica:
+                    print(c)
+
+                print_formatado(avaliados, ordem_alfabetica)
             
             elif sub_opc == 4:
                 pass  # Criar Tarefa (3)
