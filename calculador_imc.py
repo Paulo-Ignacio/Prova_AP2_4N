@@ -1,8 +1,19 @@
+Magreza_Grave = 0
+Magreza_Moderada = 0
+Magreza_Leve = 0
+Peso_Ideal = 0
+Sobrepeso = 0
+Obesidade_Grau_I = 0
+Obesidade_Grau_II = 0
+Obesidade_Grau_III = 0
+
+        
+        
 def menu_salvar_carregar():
     while True:
-        print("*********************************")
-        print("**** SALVAR E CARREGAR DADOS ****")
-        print("*********************************")
+        print("***********")
+        print("** SALVAR E CARREGAR DADOS **")
+        print("***********")
         
         print("""MENU DE SALVAR E CARREGAR
         1 - Salvar Dados em um Arquivo
@@ -33,9 +44,9 @@ def menu_salvar_carregar():
 
 def menu_estatisticas():
     while True:
-        print("*********************************")
-        print("********* ESTATÍSTICAS **********")
-        print("*********************************")
+        print("***********")
+        print("*** ESTATÍSTICAS ****")
+        print("***********")
         
         print("""MENU DE ESTATÍSTICAS E ORDENAÇÃO
         1 - Exibir a Média de IMCs
@@ -50,7 +61,42 @@ def menu_estatisticas():
         elif opc == 2:
             pass  # Criar Tarefa (5)
         elif opc == 3:
-            pass  # Criar Tarefa (6)
+            for dados in avaliados:
+                if dados[2] < 16:
+                    Magreza_Grave = Magreza_Grave + 1
+        
+                elif dados[2] <= 16.9:
+                    
+                    Magreza_Moderada =  Magreza_Moderada + 1
+                    
+                elif dados[2] <= 18.5:
+                    Magreza_Leve =  Magreza_Leve + 1
+                        
+                elif dados[2] <= 24.9:
+                    Peso_Ideal =  Peso_Ideal + 1
+                        
+                elif dados[2] <= 29.9:
+                    Sobrepeso =  Sobrepeso + 1
+                        
+                elif dados[2] <= 34.9:
+                    Obesidade_Grau_I =  Obesidade_Grau_I + 1
+                        
+                elif dados[2] <= 39.9:
+                    Obesidade_Grau_II = Obesidade_Grau_II + 1
+                        
+                else:
+                    Obesidade_Grau_III = Obesidade_Grau_III + 1
+
+            print(f"""
+                  magreza grave - {Magreza_Grave}
+                  magreza moderada - {Magreza_Moderada}
+                  magreza leve - {Magreza_Leve}
+                  peso ideal - {Peso_Ideal}
+                  sobrepeso - {Sobrepeso}
+                  obesidade I - {Obesidade_Grau_I}
+                  obesidade II - {Obesidade_Grau_II}
+                  obesidade III - {Obesidade_Grau_III}
+""")
         elif opc == 4:
             break
         else:
@@ -78,9 +124,9 @@ avaliados = []
 id = 0
 
 while True:
-    print("*********************************")
-    print("*******CALCULADORA DE IMC********")
-    print("*********************************")
+    print("***********")
+    print("**CALCULADORA DE IMC***")
+    print("***********")
     
     print("""MENU
           1 - Calcular IMC
@@ -109,9 +155,9 @@ while True:
         if len(avaliados) == 0:
             print("Nenhum avaliado registrado.")
         else:
-            print("*********************************")
-            print("*******EXIBIÇÃO DE RESULTADOS*****")
-            print("*********************************")
+            print("***********")
+            print("**EXIBIÇÃO DE RESULTADOS**")
+            print("***********")
             print("""SUBMENU DE EXIBIÇÃO DE RESULTADOS:
                   1 - Imprimir Todos os Resultados
                   2 - Imprimir por ID
