@@ -55,7 +55,7 @@ def menu_estatisticas():
                 print("-------------------------")
                 print(f"A média de IMCs é: {media_imc:.2f}")
                 print("-------------------------")
-                pass  # Criar Tarefa (4)
+                
         elif opc == 2:
             pass  # Criar Tarefa (5)
         elif opc == 3:
