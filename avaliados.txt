@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 1,murilo,26.35,Sobrepeso
 2,davi,22.71,Peso Ideal
 3,marco aurelio,19.72,Peso Ideal
+=======
+1,leo,20.76,Peso Ideal
+2,mikael ,27.78,Sobrepeso
+3,felipe,20.76,Peso Ideal
+>>>>>>> origin/grupo5
